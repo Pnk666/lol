@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="author" content="lxrdk1773n"/>
+    <title>Owned By lxrdk1773n</title>
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://sukynet.us.to/uhh/sparkle.webp"type="image/x-icon" />
+    <style>
+      * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      }
+      body {
+      font-family: 'Shadows Into Light Two', cursive;
+      background-color: #000;
+      color: #f5f5f5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 20px;
+      user-select:none;
+      }
+      a:link {
+      text-decoration: none;
+      }
+      img {
+      border-radius: 5%;
+      max-width: 100%;
+      height: auto;
+      }
+      h1 {
+      font-size: 2.5rem;
+      color: #ff0000;
+      margin-top: 20px;
+      text-shadow: 0px 0px 10px #ff0000;
+      }
+      .security-quote {
+      font-size: 1.2rem;
+      color: #ff0000;
+      border: 2px solid #f5f5f5;
+      padding: 15px;
+      border-radius: 10px;
+      background-color: rgba(0, 0, 0, 0.7);
+      box-shadow: 0 0 10px #ff0000;
+      margin: 20px 0;
+      }
+      .info-container {
+      margin-top: 10px;
+      font-size: 1rem;
+      word-wrap: break-word;
+      }
+      marquee {
+      font-size: 1rem;
+      margin: 20px 0;
+      color: #f5f5f5;
+      }
+      @media (min-width: 768px) {
+      h1 {
+      font-size: 3rem;
+      }
+      .security-quote {
+      font-size: 1.5rem;
+      padding: 20px;
+      }
+      .info-container {
+      font-size: 1.2rem;
+      }
+      }
+      @media (min-width: 1024px) {
+      body {
+      padding: 50px;
+      }
+      h1 {
+      font-size: 3.5rem;
+      }
+      .security-quote {
+      font-size: 1.8rem;
+      padding: 25px;
+      }
+      .info-container {
+      font-size: 1.5rem;
+      }
+      }
+    </style>
+  </head>
+  <body>
+    <img src="https://sukynet.us.to/uhh/sparkle.gif" alt="Hacking Animation">
+    <h1>Owned By lxrdk1773n</h1>
+    <marquee align="left" direction="left" scrollamount="9"> <span style="text-shadow: 0px 0px 4px; color: #00ff8a;"><strong>GREETZ : </strong></span>
+      >< K4N6P0L3Z >< Z1GZ4G >< NC3XP34 >< KUR0R0 >< SANANTHA >< AUDY >< CiYA >< PANDA >< 0MB4RB3R >< 3M4NZ >< BL0W >< 
+      <span style="text-shadow: 0px 0px 4px; color: #ff0000;"><strong>P00RS3CUR1TY</strong></span> >< KH&amp;7HUN6 >< GUN9L3R >< 
+      <span style="text-shadow: 0px 0px 4px; color: #ff0000;"><strong>Y O U</strong></span> ><
+    </marquee>
+    <div class="security-quote">
+      <strong>"Security is not a product, but a process. The biggest risk lies in underestimating your vulnerabilities."</strong>
+    </div>
+    <div class="info-container" id="ipContainer">Fetching IP...</div>
+    <div class="info-container" id="userAgentContainer">Fetching User Agent...</div>
+    <script>
+      function playSound() {
+        var audio = document.querySelector("audio")
+        audio.play()
+      }
+    </script>
+    <body onclick="playSound()" onemouseover="playSound()">
+      <div class="bg">
+      <audio
+        src="https://sukynet.us.to/uhh/infraction.mp3"
+        autoplay="true" loop="loop"></audio>
+      </script>
+      <script>
+        async function fetchIP() {
+            try {
+                const response = await fetch('https://api.ipify.org?format=json');
+                const data = await response.json();
+                document.getElementById('ipContainer').innerText = "Your IP: " + data.ip;
+            } catch (error) {
+                document.getElementById('ipContainer').innerText = 'Error fetching IP';
+            }
+        }
+        
+        function fetchUserAgent() {
+            const userAgent = navigator.userAgent;
+            document.getElementById('userAgentContainer').innerText = "Your User Agent: " + userAgent;
+        }
+        
+        fetchIP();
+        fetchUserAgent();
+      </script>
+  </body>
+</html>
