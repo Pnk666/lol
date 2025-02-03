@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ManZ Birthday</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Courier New', monospace;
+            background-image: url(https://d.top4top.io/p_3321o88z91.gif);
+	    background-size: cover;
+	    background-position: center;
+	    background-attachment : fixed;
+            color: #0f0;
+            overflow: hidden;
+        }
+        .container {
+            margin-top: 20vh;
+        }
+        h1 {
+            font-size: 3em;
+            color: #0f0;
+            animation: glitch 1s infinite alternate;
+        }
+        @keyframes glitch {
+            0% { text-shadow: 2px 2px 0px #ff00ff, -2px -2px 0px #00ffff; }
+            100% { text-shadow: -2px -2px 0px #ff00ff, 2px 2px 0px #00ffff; }
+        }
+        .cake {
+            font-size: 5em;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1.2em;
+            margin-top: 20px;
+            background-color: #0f0;
+            color: #000;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <audio id="birthdayMusic" loop>
+        <source src="https://archive.org/download/DJTHBRU/DJ%20SELAMAT%20ULANG%20TAHUN%20%28BREAKBEAT%20MIX%202017%29.mp3">
+        Your browser does not support the audio element.
+    </audio>
+    <div class="container">
+        <h1>H4ppy B1rthd4y! ManZ 🎉</h1>
+        <h2>"Wishing you all the happiness on your special day. Have a fantastic birthday!"</h2>
+        <div class="cake">🎂</div>
+        <button onclick="celebrate()">[ CELEBRATE ]</button>
+    </div>
+    <script>
+        function celebrate() {
+            document.getElementById('birthdayMusic').play();
+            showConfetti();
+        }
+
+        function showConfetti() {
+            const confettiContainer = document.createElement('div');
+            confettiContainer.style.position = 'fixed';
+            confettiContainer.style.top = '0';
+            confettiContainer.style.left = '0';
+            confettiContainer.style.width = '100vw';
+            confettiContainer.style.height = '100vh';
+            confettiContainer.style.pointerEvents = 'none';
+            document.body.appendChild(confettiContainer);
+
+            for (let i = 0; i < 100; i++) {
+                let confetti = document.createElement('div');
+                confetti.style.width = '10px';
+                confetti.style.height = '10px';
+                confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+                confetti.style.position = 'absolute';
+                confetti.style.top = `${Math.random() * 100}vh`;
+                confetti.style.left = `${Math.random() * 100}vw`;
+                confetti.style.opacity = Math.random();
+                confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
+                confetti.style.transition = 'top 2s ease-out';
+                confettiContainer.appendChild(confetti);
+                
+                setTimeout(() => {
+                    confetti.style.top = '100vh';
+                }, 100);
+            }
+            
+            setTimeout(() => {
+                confettiContainer.remove();
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
